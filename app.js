@@ -17,4 +17,10 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/:page", (req, res) => {
+    const page = req.params.page;
+    res.render(page);
+});
+
 app.listen(port, () => {console.log(`Server is running on http://localhost:${port}`)});
+
